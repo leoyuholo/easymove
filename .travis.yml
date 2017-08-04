@@ -8,8 +8,7 @@ services:
   - rabbitmq
 
 env:
-  - RABBITMQ_URI=amqp://localhost
-  - MONGODB_URI=mongodb://localhost
+  - RABBITMQ_URI=amqp://localhost MONGODB_URI=mongodb://localhost
 
 install:
   - npm install --prefix lib/amqp
