@@ -3,6 +3,7 @@
   "description": "amqp library helper",
   "scripts": {
     "dev": "nodemon --exec npm run test --watch .",
+    "lint": "eslint .",
     "test": "mocha -t 10000 index.test.js"
   },
   "main": "index.js",
@@ -16,6 +17,12 @@
     "bluebird": "^3.5.0",
     "chai": "^4.1.0",
     "chai-as-promised": "^7.1.1",
+    "eslint": "^4.3.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-node": "^5.1.1",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1",
     "mocha": "^3.5.0",
     "nodemon": "^1.11.0",
     "sinon": "^2.4.1",
