@@ -91,7 +91,6 @@ describe('app', () => {
 					.expect(200)
 					.then(res => res.body.token)
 					.then(token => {
-						console.log(token)
 						return request(app)
 							.get(`/route/${token}`)
 							.expect(200)
