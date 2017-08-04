@@ -6,7 +6,8 @@
     "dev": "nodemon index.js",
     "lint": "eslint .",
     "test": "mocha -t 10000 --recursive",
-    "test-watch": "nodemon --exec npm run test --watch . --ignore */nockFixtures"
+    "test-watch": "nodemon --exec npm run test --watch . --ignore */nockFixtures",
+    "coverage": "nyc --reporter=lcov mocha -t 10000 --recursive"
   },
   "dependencies": {
     "@google/maps": "^0.4.3",
@@ -24,6 +25,7 @@
     "eslint-plugin-standard": "^3.0.1",
     "mocha": "^3.5.0",
     "nock": "^9.0.14",
-    "nodemon": "^1.11.0"
+    "nodemon": "^1.11.0",
+    "nyc": "^11.1.0"
   }
 }

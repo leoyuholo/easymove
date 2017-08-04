@@ -4,7 +4,8 @@
   "scripts": {
     "dev": "nodemon --exec npm run test --watch .",
     "lint": "eslint .",
-    "test": "mocha -t 10000 index.test.js"
+    "test": "mocha -t 10000 index.test.js",
+    "coverage": "nyc --reporter=lcov mocha -t 10000 index.test.js"
   },
   "main": "index.js",
   "dependencies": {
@@ -25,6 +26,7 @@
     "eslint-plugin-standard": "^3.0.1",
     "mocha": "^3.5.0",
     "nodemon": "^1.11.0",
+    "nyc": "^11.1.0",
     "sinon": "^2.4.1",
     "sinon-chai": "^2.12.0"
   }

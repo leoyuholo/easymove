@@ -30,4 +30,4 @@ services:
     working_dir: /app/lib/amqp
     depends_on:
       - rabbitmq
-    command: npm run dev
+    command: npm run coverage

@@ -13,7 +13,7 @@ const query = (origin, destination, waypoints) => {
 	return googleMapsClient.directions({origin, destination, waypoints, mode: 'driving', optimize: true})
 		.asPromise()
 		.catch(response => {
-			throw new Error(response.json.error_message)
+			throw new Error(response.json ? response.json.error_message : response.message)
 		})
 		.then(response => response.json.routes[0].legs)
 		.then(legs => {
@@ -30,6 +30,8 @@ const query = (origin, destination, waypoints) => {
 }
 
 algorithm.computeRoute = (start, dropoffs) => {
+	if (dropoffs.length > 24)
+		return Promise.reject(new Error(`Too many dropoffs in the request (${dropoffs.length}). The maximum allowed dropoffs for this request is 24.`))
 	const queries = dropoffs.map(dropoff => query(start, dropoff, _.without(dropoffs, dropoff)))
 	return Promise.all(queries)
 		.then(routes => _.minBy(routes, 'totalDistance'))
