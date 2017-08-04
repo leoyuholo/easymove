@@ -1,19 +1,5 @@
 version: '3'
 services:
-  rabbitmq:
-    ports:
-      - "5672:5672"
-      - "15672:15672"
-    logging:
-      driver: none
-  mongo:
-    ports:
-      - "27017:27017"
-    logging:
-      driver: none
-  worker:
-    environment:
-      - GOOGLE_MAPS_API_KEY=AIzaSomeGoogleMapApiKeyThatIs39CharLong
   e2e:
     build: ./e2e
     depends_on:
