@@ -13,7 +13,7 @@ services:
       driver: none
   worker:
     environment:
-      - GOOGLE_MAPS_API_KEY=AIzaSyCC6GAvnCdEBnhxMfmglqLiR90G5iPocko
+      - GOOGLE_MAPS_API_KEY=AIzaSomeGoogleMapApiKeyThatIs39CharLong
   e2e:
     image: node:6
     volumes:
