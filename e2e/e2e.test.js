@@ -7,10 +7,10 @@ const promiseRetry = require('promise-retry')
 chai.use(chaiAsPromised)
 const should = chai.should()
 
-describe('e2e', function () {
+describe('e2e', () => {
 	const host = 'http://web'
 
-	before(function () {
+	before(() => {
 		return promiseRetry(retry => {
 			return request(host)
 				.get('/route/not-a-valid-token')
@@ -18,7 +18,7 @@ describe('e2e', function () {
 		})
 	})
 
-	it('should create a route request and return a token', function () {
+	it('should create a route request and return a token', () => {
 		const requestBody = [
 			['22.372081', '114.107877'],
 			['22.284419', '114.159510'],
@@ -35,7 +35,7 @@ describe('e2e', function () {
 			})
 	})
 
-	it('should retrieve route', function () {
+	it('should retrieve route', () => {
 		const requestBody = [
 			['22.372081', '114.107877'],
 			['22.284419', '114.159510'],
@@ -57,7 +57,7 @@ describe('e2e', function () {
 			})
 	})
 
-	it('should retrieve a successfully computed route', function () {
+	it('should retrieve a successfully computed route', () => {
 		const requestBody = [
 			['22.372081', '114.107877'],
 			['22.284419', '114.159510'],
@@ -90,7 +90,7 @@ describe('e2e', function () {
 			})
 	})
 
-	it('should retrieve a failed route', function () {
+	it('should retrieve a failed route', () => {
 		const requestBody = [
 			['22.284419', '114.159510'],
 			['22.326442', '114.167811'],

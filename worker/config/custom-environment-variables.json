@@ -3,5 +3,11 @@
     "google": {
       "maps": "GOOGLE_MAPS_API_KEY"
     }
+  },
+  "mongo": {
+    "uri": "MONGODB_URI"
+  },
+  "rabbitmq": {
+    "uri": "RABBITMQ_URI"
   }
 }

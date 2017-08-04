@@ -15,10 +15,7 @@ services:
     environment:
       - GOOGLE_MAPS_API_KEY=AIzaSomeGoogleMapApiKeyThatIs39CharLong
   e2e:
-    image: node:6
-    volumes:
-      - .:/app
-    working_dir: /app/e2e
+    build: ./e2e
     depends_on:
       - web
       - worker

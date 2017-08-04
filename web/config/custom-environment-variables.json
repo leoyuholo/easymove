@@ -1,3 +1,9 @@
 {
-  "port": "WEB_PORT"
+  "port": "WEB_PORT",
+  "mongo": {
+    "uri": "MONGODB_URI"
+  },
+  "rabbitmq": {
+    "uri": "RABBITMQ_URI"
+  }
 }

@@ -153,7 +153,7 @@ describe('algorithms', () => {
 						['22.4162632', '114.2109318'],
 						['22.2829989', '114.1370848'],
 						['22.3363998', '114.2654655'],
-						['22.28588', '114.158131'],
+						['22.28588', '114.158131']
 					]
 					const errorMessage = 'Too many dropoffs in the request (30). The maximum allowed dropoffs for this request is 24.'
 

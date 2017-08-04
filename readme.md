@@ -9,7 +9,7 @@ First, edit `docker-compose.yaml` to modify the environment variable `GOOGLE_MAP
 
 Then, run `docker-compose up` to spin up a fully functional HTTP endpoint.
 
-For endpoint specification, please refer to the [original challenge specification](https://github.com/lalamove/challenge/blob/master/backend.md).
+For endpoint specification, please refer to the [original challenge specification](https://github.com/lalamove/challenge/blob/4a15d3e9480531b8e79fac418a2ea78f8b57efe4/backend.md).
 
 To spin up more workers, run `docker-compose up --scale worker=3`, feel free to set 3 to any positive numbers you want.
 
