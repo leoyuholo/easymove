@@ -1,4 +1,5 @@
 # easymove coding test
+[![Build Status](https://travis-ci.org/leoyuholo/easymove.svg?branch=master)](https://travis-ci.org/leoyuholo/easymove)
 
 ## Deployment
 ** Prerequisite**: Need to have [docker](https://store.docker.com/editions/community/docker-ce-server-ubuntu/plans/docker-ce-server-ubuntu-tier?tab=instructions) and [docker-compose](https://docs.docker.com/compose/install/) ](https://docs.docker.com/compose/) installed on system.
