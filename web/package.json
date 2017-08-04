@@ -2,8 +2,9 @@
   "name": "easymove-coding-test-web",
   "description": "web endpoint for computing route",
   "scripts": {
+    "start": "node index.js",
     "dev": "nodemon index.js",
-    "test": "mocha --recursive",
+    "test": "mocha -t 10000 --recursive",
     "test-watch": "nodemon --exec npm run test --watch ."
   },
   "dependencies": {

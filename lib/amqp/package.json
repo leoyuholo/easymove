@@ -3,12 +3,13 @@
   "description": "amqp library helper",
   "scripts": {
     "dev": "nodemon --exec npm run test --watch .",
-    "test": "mocha index.test.js"
+    "test": "mocha -t 10000 index.test.js"
   },
   "main": "index.js",
   "dependencies": {
     "amqplib": "^0.5.1",
     "lodash": "^4.17.4",
+    "promise-retry": "^1.1.1",
     "uuid": "^3.1.0"
   },
   "devDependencies": {

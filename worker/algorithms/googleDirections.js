@@ -12,10 +12,8 @@ const googleMapsClient = googleMaps.createClient({
 const query = (origin, destination, waypoints) => {
 	return googleMapsClient.directions({origin, destination, waypoints, mode: 'driving', optimize: true})
 		.asPromise()
-		.then(response => {
-			if (response.json.error_message)
-				throw new Error(response.json.error_message)
-			return response
+		.catch(response => {
+			throw new Error(response.json.error_message)
 		})
 		.then(response => response.json.routes[0].legs)
 		.then(legs => {

@@ -17,6 +17,7 @@ const worker = ({token, start, dropoffs}) => {
 			})
 		})
 		.catch(err => {
+			console.log('failure', err)
 			return amqp.sendToWorker(config.get('queues.routeResult'), {
 				status: 'failure',
 				token,

@@ -1,0 +1,7 @@
+{
+  "apiKeys": {
+    "google": {
+      "maps": "GOOGLE_MAPS_API_KEY"
+    }
+  }
+}

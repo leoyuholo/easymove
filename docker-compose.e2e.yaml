@@ -1,0 +1,14 @@
+version: '3'
+services:
+  worker:
+    environment:
+      - GOOGLE_MAPS_API_KEY=AIzaSomeGoogleMapApiKeyThatIs39CharLong
+  e2e:
+    image: node:6
+    volumes:
+      - .:/app
+    working_dir: /app/e2e
+    depends_on:
+      - web
+      - worker
+    command: npm run test

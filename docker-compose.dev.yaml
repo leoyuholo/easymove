@@ -1,8 +1,27 @@
 version: '3'
 services:
+  rabbitmq:
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    logging:
+      driver: none
+  mongo:
+    ports:
+      - "27017:27017"
+    logging:
+      driver: none
   web:
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app
+    environment:
+      - WEB_PORT=3000
     command: npm run test-watch
   worker:
+    volumes:
+      - .:/app
     command: npm run test-watch
   lib:
     image: node:6

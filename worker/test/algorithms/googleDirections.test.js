@@ -27,9 +27,9 @@ describe('algorithms', () => {
 						["22.326442", "114.167811"]
 					]
 					const path = [
-						[22.3720481,114.107857],
-						[22.3264374,114.1678099],
-						[22.2844098,114.1595265]
+						[22.3720481, 114.107857],
+						[22.3264374, 114.1678099],
+						[22.2844098, 114.1595265]
 					]
 					const totalDistance = 18132
 					const totalTime = 1755
@@ -158,7 +158,7 @@ describe('algorithms', () => {
 
 					return googleDirectionsAlgorithm.computeRoute(start, dropoffs)
 						.catch(err => {
-							err.json.error_message.should.be.equal(errorMessage)
+							err.message.should.be.equal(errorMessage)
 						})
 						.then(nockDone)
 				})

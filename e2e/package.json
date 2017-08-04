@@ -1,0 +1,16 @@
+{
+  "name": "easymove-coding-test-integration-test",
+  "description": "end to end integration test",
+  "scripts": {
+    "test": "mocha -t 10000 e2e.test.js",
+    "test-watch": "nodemon --exec npm run test --watch ."
+  },
+  "dependencies": {
+    "bluebird": "^3.5.0",
+    "chai": "^4.1.0",
+    "chai-as-promised": "^7.1.1",
+    "mocha": "^3.5.0",
+    "nodemon": "^1.11.0",
+    "supertest": "^3.0.0"
+  }
+}
