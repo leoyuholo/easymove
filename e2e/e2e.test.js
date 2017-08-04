@@ -16,13 +16,13 @@ describe('e2e', function () {
 				.get('/route/not-a-valid-token')
 				.catch(retry)
 		})
-	});
+	})
 
 	it('should create a route request and return a token', function () {
 		const requestBody = [
-			["22.372081", "114.107877"],
-			["22.284419", "114.159510"],
-			["22.326442", "114.167811"]
+			['22.372081', '114.107877'],
+			['22.284419', '114.159510'],
+			['22.326442', '114.167811']
 		]
 
 		return request(host)
@@ -33,13 +33,13 @@ describe('e2e', function () {
 				should.exist(res.body.token)
 				res.body.token.should.be.a('string')
 			})
-	});
+	})
 
 	it('should retrieve route', function () {
 		const requestBody = [
-			["22.372081", "114.107877"],
-			["22.284419", "114.159510"],
-			["22.326442", "114.167811"]
+			['22.372081', '114.107877'],
+			['22.284419', '114.159510'],
+			['22.326442', '114.167811']
 		]
 
 		return request(host)
@@ -55,18 +55,18 @@ describe('e2e', function () {
 						res.body.status.should.be.equal('in progress')
 					})
 			})
-	});
+	})
 
 	it('should retrieve a successfully computed route', function () {
 		const requestBody = [
-			["22.372081", "114.107877"],
-			["22.284419", "114.159510"],
-			["22.326442", "114.167811"]
+			['22.372081', '114.107877'],
+			['22.284419', '114.159510'],
+			['22.326442', '114.167811']
 		]
 		const path = [
-			["22.3720481", "114.107857"],
-			["22.3264374", "114.1678099"],
-			["22.2844098", "114.1595265"]
+			['22.3720481', '114.107857'],
+			['22.3264374', '114.1678099'],
+			['22.2844098', '114.1595265']
 		]
 		const totalDistance = 18132
 		const totalTime = 1755
@@ -88,5 +88,5 @@ describe('e2e', function () {
 						res.body.total_time.should.be.equal(totalTime)
 					})
 			})
-	});
-});
+	})
+})

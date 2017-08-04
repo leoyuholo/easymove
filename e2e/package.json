@@ -2,7 +2,8 @@
   "name": "easymove-coding-test-integration-test",
   "description": "end to end integration test",
   "scripts": {
-    "test": "mocha -t 10000 e2e.test.js",
+    "lint": "eslint .",
+    "test": "mocha -t 20000 e2e.test.js",
     "test-watch": "nodemon --exec npm run test --watch ."
   },
   "dependencies": {
@@ -11,6 +12,15 @@
     "chai-as-promised": "^7.1.1",
     "mocha": "^3.5.0",
     "nodemon": "^1.11.0",
+    "promise-retry": "^1.1.1",
     "supertest": "^3.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^4.3.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-node": "^5.1.1",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1"
   }
 }
