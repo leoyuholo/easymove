@@ -1,0 +1,8 @@
+{
+  "rabbitmq": {
+    "uri": "amqp://rabbitmq"
+  },
+  "queues": {
+    "routeRequest": "'lib.amqp.test.route.request'"
+  }
+}
