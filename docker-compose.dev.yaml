@@ -1,0 +1,14 @@
+version: '3'
+services:
+  web:
+    command: npm run test-watch
+  worker:
+    command: npm run test-watch
+  lib:
+    image: node:6
+    volumes:
+      - .:/app
+    working_dir: /app/lib/amqp
+    depends_on:
+      - rabbitmq
+    command: npm run dev

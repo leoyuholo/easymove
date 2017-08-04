@@ -1,0 +1,23 @@
+{
+  "name": "amqp",
+  "description": "amqp library helper",
+  "scripts": {
+    "dev": "nodemon --exec npm run test --watch .",
+    "test": "mocha index.test.js"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "amqplib": "^0.5.1",
+    "lodash": "^4.17.4",
+    "uuid": "^3.1.0"
+  },
+  "devDependencies": {
+    "bluebird": "^3.5.0",
+    "chai": "^4.1.0",
+    "chai-as-promised": "^7.1.1",
+    "mocha": "^3.5.0",
+    "nodemon": "^1.11.0",
+    "sinon": "^2.4.1",
+    "sinon-chai": "^2.12.0"
+  }
+}

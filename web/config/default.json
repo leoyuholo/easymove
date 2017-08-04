@@ -1,0 +1,13 @@
+{
+  "port": 3000,
+  "mongo": {
+    "uri": "mongodb://mongo"
+  },
+  "rabbitmq": {
+    "uri": "amqp://rabbitmq"
+  },
+  "queues": {
+    "routeRequest": "route.request",
+    "routeResult": "route.result"
+  }
+}

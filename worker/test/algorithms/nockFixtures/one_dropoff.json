@@ -1,0 +1,362 @@
+[
+    {
+        "scope": "https://maps.googleapis.com:443",
+        "method": "GET",
+        "path": "/maps/api/directions/json?destination=22.284419%2C114.159510&mode=driving&origin=22.372081%2C114.107877&waypoints=&key=AIzaSomeGoogleMapApiKeyThatIs39CharLong",
+        "body": "",
+        "status": 200,
+        "response": {
+            "geocoded_waypoints": [
+                {
+                    "geocoder_status": "OK",
+                    "place_id": "ChIJ_aA8buX4AzQRy6kkL7muCRI",
+                    "types": [
+                        "street_address"
+                    ]
+                },
+                {
+                    "geocoder_status": "OK",
+                    "place_id": "ChIJAdoqqWMABDQR7XoWJZ5at7o",
+                    "types": [
+                        "premise"
+                    ]
+                }
+            ],
+            "routes": [
+                {
+                    "bounds": {
+                        "northeast": {
+                            "lat": 22.372189,
+                            "lng": 114.1617241
+                        },
+                        "southwest": {
+                            "lat": 22.2844098,
+                            "lng": 114.1068394
+                        }
+                    },
+                    "copyrights": "Map data ©2017 Google",
+                    "legs": [
+                        {
+                            "distance": {
+                                "text": "15.5 km",
+                                "value": 15518
+                            },
+                            "duration": {
+                                "text": "17 mins",
+                                "value": 995
+                            },
+                            "end_address": "Laguna City, Central, Hong Kong",
+                            "end_location": {
+                                "lat": 22.2844098,
+                                "lng": 114.1595265
+                            },
+                            "start_address": "11 Hoi Shing Rd, Tsuen Wan, Hong Kong",
+                            "start_location": {
+                                "lat": 22.3720481,
+                                "lng": 114.107857
+                            },
+                            "steps": [
+                                {
+                                    "distance": {
+                                        "text": "32 m",
+                                        "value": 32
+                                    },
+                                    "duration": {
+                                        "text": "1 min",
+                                        "value": 6
+                                    },
+                                    "end_location": {
+                                        "lat": 22.372189,
+                                        "lng": 114.1075858
+                                    },
+                                    "html_instructions": "Head <b>northwest</b> on <b>Hoi Shing Rd</b> toward <b>Hoi Kok St</b>",
+                                    "polyline": {
+                                        "points": "ippgCcumwT[t@"
+                                    },
+                                    "start_location": {
+                                        "lat": 22.3720481,
+                                        "lng": 114.107857
+                                    },
+                                    "travel_mode": "DRIVING"
+                                },
+                                {
+                                    "distance": {
+                                        "text": "0.1 km",
+                                        "value": 115
+                                    },
+                                    "duration": {
+                                        "text": "1 min",
+                                        "value": 61
+                                    },
+                                    "end_location": {
+                                        "lat": 22.3714175,
+                                        "lng": 114.1068394
+                                    },
+                                    "html_instructions": "Turn <b>left</b> onto <b>Hoi Kok St</b>",
+                                    "maneuver": "turn-left",
+                                    "polyline": {
+                                        "points": "eqpgCmsmwTd@`@NL\\^dAdA"
+                                    },
+                                    "start_location": {
+                                        "lat": 22.372189,
+                                        "lng": 114.1075858
+                                    },
+                                    "travel_mode": "DRIVING"
+                                },
+                                {
+                                    "distance": {
+                                        "text": "0.2 km",
+                                        "value": 207
+                                    },
+                                    "duration": {
+                                        "text": "1 min",
+                                        "value": 50
+                                    },
+                                    "end_location": {
+                                        "lat": 22.3704505,
+                                        "lng": 114.1083707
+                                    },
+                                    "html_instructions": "Turn <b>left</b> onto <b>Hoi Hing Rd</b>",
+                                    "maneuver": "turn-left",
+                                    "polyline": {
+                                        "points": "klpgCwnmwTl@o@tAyAx@}@FIBEBE@C?C@M?I?C?AACAGCGGY"
+                                    },
+                                    "start_location": {
+                                        "lat": 22.3714175,
+                                        "lng": 114.1068394
+                                    },
+                                    "travel_mode": "DRIVING"
+                                },
+                                {
+                                    "distance": {
+                                        "text": "0.4 km",
+                                        "value": 422
+                                    },
+                                    "duration": {
+                                        "text": "1 min",
+                                        "value": 42
+                                    },
+                                    "end_location": {
+                                        "lat": 22.3684257,
+                                        "lng": 114.1109465
+                                    },
+                                    "html_instructions": "At the roundabout, take the <b>3rd</b> exit onto the <b>Route 5</b> ramp to <b>Tsing Yi</b>/<b>Airport</b>/<b>Kowloon</b>/<b>機場</b>/<b>青衣</b>/<b>九龍</b>",
+                                    "maneuver": "roundabout-left",
+                                    "polyline": {
+                                        "points": "ifpgCixmwTC@C@C?C?C?E?C?C?GCGEGEEGCIAEAI@I@E@E@EBEBCBEBADCDADADAF?@?@?@?@@@?@?@?VYrFgGVWlAmAHIDCDCDAFC"
+                                    },
+                                    "start_location": {
+                                        "lat": 22.3704505,
+                                        "lng": 114.1083707
+                                    },
+                                    "travel_mode": "DRIVING"
+                                },
+                                {
+                                    "distance": {
+                                        "text": "2.8 km",
+                                        "value": 2834
+                                    },
+                                    "duration": {
+                                        "text": "2 mins",
+                                        "value": 149
+                                    },
+                                    "end_location": {
+                                        "lat": 22.3487574,
+                                        "lng": 114.1253964
+                                    },
+                                    "html_instructions": "Merge onto <b>Tsuen Wan Rd</b>/<b>Route 5</b>",
+                                    "maneuver": "merge",
+                                    "polyline": {
+                                        "points": "uyogCmhnwTFEJMh@k@TWh@k@f@i@~CmD~CkD`@e@`@g@@Ar@s@n@o@fAwA`@q@R]b@u@Ta@jAeClAgCFOTc@LQT[r@aAFGBE^]POXWPQXSl@a@XQ\\Qp@YfAc@tBw@f@ObC{@p@Sd@ONEn@Wp@Yr@e@NKz@w@lAmAlAuAfGyGlAoAlAoA`DsDZ[Z[~@cAfAmA\\[LKLI@ARI^MBC^IPCLA`@?^AV?T@LBf@JnAVJBt@PbAVZFTDl@Lz@L~@P|@LR@T@^B"
+                                    },
+                                    "start_location": {
+                                        "lat": 22.3684257,
+                                        "lng": 114.1109465
+                                    },
+                                    "travel_mode": "DRIVING"
+                                },
+                                {
+                                    "distance": {
+                                        "text": "7.0 km",
+                                        "value": 6968
+                                    },
+                                    "duration": {
+                                        "text": "5 mins",
+                                        "value": 319
+                                    },
+                                    "end_location": {
+                                        "lat": 22.3030603,
+                                        "lng": 114.1588345
+                                    },
+                                    "html_instructions": "Take exit <b>9D</b> to merge onto <b>Route 3</b> toward <b>Tsim Sha Tsui</b>/<b>Hong Kong (W)</b>/<b>Lantau</b>/<b>尖沙咀</b>/<b>香港（西）</b>/<b>大嶼山</b><div style=\"font-size:0.9em\">Partial toll road</div>",
+                                    "maneuver": "ramp-left",
+                                    "polyline": {
+                                        "points": "w~kgCwbqwTBABCB?D?B?D?D@D?H?H@H@b@Br@BbBHdBHhA?j@Ed@Cl@Iz@QZKFCXMb@YFGlAiAJIHEHCrAaBRYBGp@qAFOb@kAr@_CLa@Re@Te@zA{Bf@s@^a@BAb@]ZSNKNKr@_@ZOTMlEeBxB{@VIHEHEJEf@Or@Wp@Wp@YvBiATMJGNIv@g@t@i@t@m@dA}@@At@w@NORSx@cAZe@JOJOzAkCh@gA`A_C~@uC`AkDRu@V_ATw@XaA^oArGgUJ_@J_@BGLa@Jc@Ts@\\mAJ[J[ZmAhAiEfAcE^uAL_@N]J]?A@AXu@tAsDd@kAhCuF`@w@|@}ApAsBjByCl@s@fCeD~@cA^a@~@cAZ[tBsBh@e@fCoBJIJIPMDEPMPM~EcDBAVQ\\QZQ^UZQ\\SbB_AlD_BtD{AvE}ApC_AZKfDaAh@Q`Cs@vA[b@KhAYtAW|AWzBS~COjCCd@@xABxAFzAJr@Hf@DbANn@JjATpA\\|DhArE`BjBn@lDnAjChA@?vBrA"
+                                    },
+                                    "start_location": {
+                                        "lat": 22.3487574,
+                                        "lng": 114.1253964
+                                    },
+                                    "travel_mode": "DRIVING"
+                                },
+                                {
+                                    "distance": {
+                                        "text": "2.4 km",
+                                        "value": 2380
+                                    },
+                                    "duration": {
+                                        "text": "2 mins",
+                                        "value": 128
+                                    },
+                                    "end_location": {
+                                        "lat": 22.2896414,
+                                        "lng": 114.1425139
+                                    },
+                                    "html_instructions": "Keep <b>right</b> to continue on <b>Western Harbour Crossing</b>/<b>Route 3</b><div style=\"font-size:0.9em\">Toll road</div>",
+                                    "maneuver": "keep-right",
+                                    "polyline": {
+                                        "points": "cacgCuswwTh@h@DBBDBDBBBDBDBBBDBBBBBD@BBBBBBD@Bf@j@b@f@|@fA`AbAlAlAf@f@rDfDpCbCfLzJta@d_@nCjCvAfAn@h@n@p@f@h@h@v@^p@Vp@Pv@Hf@BJB^@\\?VATO`CEb@Gt@Oh@y@nB"
+                                    },
+                                    "start_location": {
+                                        "lat": 22.3030603,
+                                        "lng": 114.1588345
+                                    },
+                                    "travel_mode": "DRIVING"
+                                },
+                                {
+                                    "distance": {
+                                        "text": "1.7 km",
+                                        "value": 1666
+                                    },
+                                    "duration": {
+                                        "text": "2 mins",
+                                        "value": 96
+                                    },
+                                    "end_location": {
+                                        "lat": 22.2869708,
+                                        "lng": 114.153389
+                                    },
+                                    "html_instructions": "Take exit <b>1A</b> on the <b>right</b> to merge onto <b>Connaught Rd Central</b>/<b>Route 4</b> toward <b>Central</b>/<b>中區</b><div style=\"font-size:0.9em\">Partial toll road</div>",
+                                    "maneuver": "ramp-right",
+                                    "polyline": {
+                                        "points": "gm`gCumtwT_@j@OVs@nAUt@CNAN?N?NBHBRDNFJX\\NLXLLBB@D@P?VAJAFCVONKJMDGFOFSJ_@@Y?_@Ck@Em@K_AGm@A]@u@JgC@o@Ba@Ba@@O?WBa@@u@?KCoAAe@?UAgAEu@A_@@i@Bm@Dc@F[DSH[\\}ANo@DKH]@C@A@AJGBIBGX{A@EBOBO@GJg@DUDW@IXqAVsA?CDMHa@H_@f@mCTcABO@CF]DOF[F[VmATkABI@I"
+                                    },
+                                    "start_location": {
+                                        "lat": 22.2896414,
+                                        "lng": 114.1425139
+                                    },
+                                    "travel_mode": "DRIVING"
+                                },
+                                {
+                                    "distance": {
+                                        "text": "0.4 km",
+                                        "value": 367
+                                    },
+                                    "duration": {
+                                        "text": "1 min",
+                                        "value": 23
+                                    },
+                                    "end_location": {
+                                        "lat": 22.2871201,
+                                        "lng": 114.1569303
+                                    },
+                                    "html_instructions": "Take exit <b>12C</b> toward <b>Connaught Place</b>/<b>Airport Express Station</b>/<b>康樂廣場</b>/<b>機場快綫車站</b>",
+                                    "maneuver": "ramp-left",
+                                    "polyline": {
+                                        "points": "q|_gCuqvwTAu@?C?C?A?G?G?[Ae@Ao@AIGeAEg@O{A?SAUCW?Q?s@@wAJmA"
+                                    },
+                                    "start_location": {
+                                        "lat": 22.2869708,
+                                        "lng": 114.153389
+                                    },
+                                    "travel_mode": "DRIVING"
+                                },
+                                {
+                                    "distance": {
+                                        "text": "0.4 km",
+                                        "value": 384
+                                    },
+                                    "duration": {
+                                        "text": "1 min",
+                                        "value": 54
+                                    },
+                                    "end_location": {
+                                        "lat": 22.2854796,
+                                        "lng": 114.1600935
+                                    },
+                                    "html_instructions": "Continue straight onto <b>Man Po St</b>",
+                                    "maneuver": "straight",
+                                    "polyline": {
+                                        "points": "o}_gCygwwTBUDgABOH_A@CNo@DQZ{@b@y@b@g@Zc@b@c@`@_@Xa@@Ct@wA"
+                                    },
+                                    "start_location": {
+                                        "lat": 22.2871201,
+                                        "lng": 114.1569303
+                                    },
+                                    "travel_mode": "DRIVING"
+                                },
+                                {
+                                    "distance": {
+                                        "text": "0.1 km",
+                                        "value": 143
+                                    },
+                                    "duration": {
+                                        "text": "1 min",
+                                        "value": 67
+                                    },
+                                    "end_location": {
+                                        "lat": 22.2844098,
+                                        "lng": 114.1595265
+                                    },
+                                    "html_instructions": "Turn <b>right</b> onto <b>Man Yiu St</b>",
+                                    "maneuver": "turn-right",
+                                    "polyline": {
+                                        "points": "gs_gCq{wwTNSNNz@d@j@ZbAj@HD"
+                                    },
+                                    "start_location": {
+                                        "lat": 22.2854796,
+                                        "lng": 114.1600935
+                                    },
+                                    "travel_mode": "DRIVING"
+                                }
+                            ],
+                            "traffic_speed_entry": [],
+                            "via_waypoint": []
+                        }
+                    ],
+                    "overview_polyline": {
+                        "points": "ippgCcumwT[t@d@`@l@l@dAdAl@o@nCwCPY@_@GUGYC@G@Q?KCOKIQCOF[NQVIR@dHyHbB_BLERSpCyCbKgLt@u@n@o@fAwAt@oAx@wAvDaI~AwBnAkAj@e@fAs@nAk@|D{AbGoB~@]p@Yr@e@jAcAlAmAlAuAtIiJlAoA`DsDv@w@fCqCj@g@NKr@Wb@M^E`AAl@@t@NtEdAzCh@|B^h@B^BBAFCT@dI^hA?j@ErAMz@QZK`@Qj@a@xAsARIfB{Bt@yAj@{A`AaDh@kAbCoDb@c@~AiAdB}@hJqDpBs@bBq@lCwAZQlBqAzBkBv@y@b@c@tAiBV_@dCsE`A_C~@uCtAaFfBiG|Jw]|BoIfByG\\}@f@wAzB_GjDmHnCqEjByCl@s@fCeD~@cA~AeBpCoCpDuCn@g@fGaEpBkAx@e@bB_AlD_BtD{AvE}AlDkApEsA`Cs@vA[lBe@rDo@zBS~COpDArDJnCTjBTzB`@nGfB~HpClDnAjChAxBrAv@x@^f@xCpDnCpCzEnExP~Nta@d_@nCjCfCpBvAzAhAhBVp@Pv@Lr@D|@Al@UdDGt@Oh@y@nB_@j@cAfBYdAA^BXHb@`@h@NLXLPDV@b@C^SZYLWRs@@y@IyASmB?sAT{FF_CEwCAgAEu@?iAHqALo@|@uDNe@JGBI\\cBJm@X_BhCkMpAsGDSAy@?UE{B]}EEm@?eA@wAJmAH}ALoAPs@`@mAb@y@b@g@~@gA`@_@Xa@v@{ANSNNfB`AlAp@"
+                    },
+                    "summary": "Route 3",
+                    "warnings": [],
+                    "waypoint_order": []
+                }
+            ],
+            "status": "OK"
+        },
+        "rawHeaders": [
+            "Content-Type",
+            "application/json; charset=UTF-8",
+            "Date",
+            "Fri, 04 Aug 2017 07:19:41 GMT",
+            "Expires",
+            "Sat, 05 Aug 2017 07:19:41 GMT",
+            "Cache-Control",
+            "public, max-age=86400",
+            "Server",
+            "mafe",
+            "X-XSS-Protection",
+            "1; mode=block",
+            "X-Frame-Options",
+            "SAMEORIGIN",
+            "Alt-Svc",
+            "quic=\":443\"; ma=2592000; v=\"39,38,37,36,35\"",
+            "Accept-Ranges",
+            "none",
+            "Vary",
+            "Accept-Language,Accept-Encoding",
+            "Connection",
+            "close"
+        ]
+    }
+]

@@ -1,0 +1,38 @@
+[
+    {
+        "scope": "https://maps.googleapis.com:443",
+        "method": "GET",
+        "path": "/maps/api/directions/json?destination=22.284419%2C114.159510&mode=driving&origin=22.372081%2C114.107877&waypoints=optimize%3Atrue%7C22.326442%2C114.167811%7C22.3353481%2C114.1761146%7C22.4311816%2C114.215094%7C22.2619385%2C114.1295144%7C22.2466607%2C114.1757239%7C22.3129666%2C114.0412819%7C22.308047%2C113.9184808%7C22.2758835%2C114.145532%7C22.3371045%2C114.1747205%7C22.337127%2C114.17279%7C22.4162632%2C114.2109318%7C22.2829989%2C114.1370848%7C22.3363998%2C114.2654655%7C22.28588%2C114.158131%7C22.3353481%2C114.1761146%7C22.4311816%2C114.215094%7C22.2619385%2C114.1295144%7C22.2466607%2C114.1757239%7C22.3129666%2C114.0412819%7C22.308047%2C113.9184808%7C22.2758835%2C114.145532%7C22.3371045%2C114.1747205%7C22.337127%2C114.17279%7C22.4162632%2C114.2109318%7C22.2829989%2C114.1370848%7C22.3363998%2C114.2654655%7C22.28588%2C114.158131&key=AIzaSomeGoogleMapApiKeyThatIs39CharLong",
+        "body": "",
+        "status": 200,
+        "response": {
+            "error_message": "Too many waypoints in the request (29). The maximum allowed waypoints for this request is 23, plus the origin, and destination.",
+            "routes": [],
+            "status": "MAX_WAYPOINTS_EXCEEDED"
+        },
+        "rawHeaders": [
+            "Content-Type",
+            "application/json; charset=UTF-8",
+            "Date",
+            "Fri, 04 Aug 2017 07:19:43 GMT",
+            "Expires",
+            "Sat, 05 Aug 2017 07:19:43 GMT",
+            "Cache-Control",
+            "public, max-age=86400",
+            "Server",
+            "mafe",
+            "X-XSS-Protection",
+            "1; mode=block",
+            "X-Frame-Options",
+            "SAMEORIGIN",
+            "Alt-Svc",
+            "quic=\":443\"; ma=2592000; v=\"39,38,37,36,35\"",
+            "Accept-Ranges",
+            "none",
+            "Vary",
+            "Accept-Language,Accept-Encoding",
+            "Connection",
+            "close"
+        ]
+    }
+]

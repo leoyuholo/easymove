@@ -1,0 +1,14 @@
+{
+  "rabbitmq": {
+    "uri": "amqp://rabbitmq"
+  },
+  "queues": {
+    "routeRequest": "route.request",
+    "routeResult": "route.result"
+  },
+  "apiKeys": {
+    "google": {
+      "maps": "AIzaSomeGoogleMapApiKeyThatIs39CharLong"
+    }
+  }
+}

@@ -1,0 +1,38 @@
+version: '3'
+services:
+  rabbitmq:
+    image: rabbitmq:3-management
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    volumes:
+      - ./volumes/rabbitmq:/var/lib/rabbitmq
+    logging:
+      driver: none
+  mongo:
+    image: mongo:3
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./volumes/mongo:/data/db
+    logging:
+      driver: none
+  web:
+    image: node:6
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app
+    working_dir: /app/web
+    depends_on:
+      - mongo
+      - rabbitmq
+    command: npm run dev
+  worker:
+    image: node:6
+    volumes:
+      - .:/app
+    working_dir: /app/worker
+    depends_on:
+      - rabbitmq
+    command: npm run dev

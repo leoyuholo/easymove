@@ -1,0 +1,24 @@
+{
+  "name": "easymove-coding-test-web",
+  "description": "web endpoint for computing route",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "test": "mocha --recursive",
+    "test-watch": "nodemon --exec npm run test --watch ."
+  },
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "config": "^1.26.1",
+    "express": "^4.15.3",
+    "mongoose": "^4.11.5",
+    "uuid": "^3.1.0"
+  },
+  "devDependencies": {
+    "chai": "^4.1.0",
+    "chai-as-promised": "^7.1.1",
+    "mocha": "^3.5.0",
+    "nodemon": "^1.11.0",
+    "sinon": "^2.4.1",
+    "sinon-chai": "^2.12.0"
+  }
+}
