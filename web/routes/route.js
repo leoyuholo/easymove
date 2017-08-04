@@ -45,7 +45,7 @@ router.get('/:token', (req, res) => {
 				})
 			} else if (route.status === 'in progress') {
 				return res.json({status: route.status})
-			} else if (route.status === 'error') {
+			} else if (route.status === 'failure') {
 				return res.json({status: route.status, error: route.error.message})
 			} else {
 				console.error(`unknown route status ${route.status}`)
