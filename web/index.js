@@ -1,16 +1,8 @@
-const express = require('express')
-const bodyParser = require('body-parser')
 const config = require('config')
 
+const app = require('./app')
 const dbConnections = require('./dbConnections')
-const route = require('./routes/route')
 const routeResultSubscriber = require('./subscribers/routeResultSubscriber')
-
-const app = express()
-
-app.use(bodyParser.json({limit: '100mb', type: '*/*'}))
-
-app.use('/route', route)
 
 dbConnections.setup()
 	.then(() => routeResultSubscriber.subscribe(config.get('queues.routeResult')))

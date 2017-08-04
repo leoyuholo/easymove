@@ -28,7 +28,12 @@ const setupRabbitmq = () => {
 		})
 }
 
+let doneSetup = false
 connections.setup = () => {
+	if (doneSetup) return Promise.resolve()
+
+	doneSetup = true
+
 	return Promise.all([
 		setupMongoose(),
 		setupRabbitmq()
