@@ -9,7 +9,6 @@ const app = require('../../app')
 const dbConnections = require('../../dbConnections')
 
 describe('app', () => {
-
 	before(() => {
 		return dbConnections.setup()
 	})
@@ -18,9 +17,9 @@ describe('app', () => {
 		describe('/', () => {
 			it('should create a route request', () => {
 				const requestBody = [
-					["22.372081", "114.107877"],
-					["22.284419", "114.159510"],
-					["22.326442", "114.167811"]
+					['22.372081', '114.107877'],
+					['22.284419', '114.159510'],
+					['22.326442', '114.167811']
 				]
 
 				return request(app)
@@ -35,7 +34,7 @@ describe('app', () => {
 
 			it('should reject single point route request', () => {
 				const requestBody = [
-					["22.372081", "114.107877"]
+					['22.372081', '114.107877']
 				]
 
 				return request(app)
@@ -46,9 +45,9 @@ describe('app', () => {
 
 			it('should reject malformed latitude', () => {
 				const requestBody = [
-					["114.107877", "22.372081"],
-					["22.284419", "114.159510"],
-					["22.326442", "114.167811"]
+					['114.107877', '22.372081'],
+					['22.284419', '114.159510'],
+					['22.326442', '114.167811']
 				]
 
 				return request(app)
@@ -62,9 +61,9 @@ describe('app', () => {
 
 			it('should reject malformed longitude', () => {
 				const requestBody = [
-					["22.372081", "200.107877"],
-					["22.284419", "114.159510"],
-					["22.326442", "114.167811"]
+					['22.372081', '200.107877'],
+					['22.284419', '114.159510'],
+					['22.326442', '114.167811']
 				]
 
 				return request(app)
@@ -80,9 +79,9 @@ describe('app', () => {
 		describe('/:token', () => {
 			it('should retrieve route', () => {
 				const requestBody = [
-					["22.372081", "114.107877"],
-					["22.284419", "114.159510"],
-					["22.326442", "114.167811"]
+					['22.372081', '114.107877'],
+					['22.284419', '114.159510'],
+					['22.326442', '114.167811']
 				]
 
 				return request(app)

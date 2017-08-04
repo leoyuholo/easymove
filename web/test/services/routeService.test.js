@@ -4,13 +4,13 @@ const sinon = require('sinon')
 const sinonChai = require('sinon-chai')
 
 chai.use(sinonChai)
+chai.use(chaiAsPromised)
 chai.should()
 
 const dbConnections = require('../../dbConnections')
 const routeService = require('../../services/routeService')
 
 describe('services', () => {
-
 	before(() => {
 		return dbConnections.setup()
 	})
@@ -25,11 +25,11 @@ describe('services', () => {
 
 	describe('routeService', () => {
 		describe('createRequest', () => {
-			it('should a promise that resolve to a token', () =>{
-				const start = ["22.372081", "114.107877"]
+			it('should a promise that resolve to a token', () => {
+				const start = ['22.372081', '114.107877']
 				const dropoffs = [
-					["22.284419", "114.159510"],
-					["22.326442", "114.167811"]
+					['22.284419', '114.159510'],
+					['22.326442', '114.167811']
 				]
 
 				return routeService.createRequest(start, dropoffs)
@@ -38,26 +38,28 @@ describe('services', () => {
 					})
 			})
 
-			it('should call sendToWorker', () =>{
-				const start = ["22.372081", "114.107877"]
+			it('should call sendToWorker', () => {
+				const start = ['22.372081', '114.107877']
 				const dropoffs = [
-					["22.284419", "114.159510"],
-					["22.326442", "114.167811"]
+					['22.284419', '114.159510'],
+					['22.326442', '114.167811']
 				]
 
 				return routeService.createRequest(start, dropoffs)
-					.then(token => {
-						dbConnections.amqp.sendToWorker.should.be.calledOnce
+					.then(() => {
+						dbConnections.amqp.sendToWorker.callCount.should.be.equal(1)
+						dbConnections.amqp.sendToWorker.firstCall.args[0].should.be.a('string')
+						dbConnections.amqp.sendToWorker.firstCall.args[1].should.be.a('object')
 					})
 			})
 		})
 
 		describe('findRoute', () => {
 			it('should find a created route by token', () => {
-				const start = ["22.372081", "114.107877"]
+				const start = ['22.372081', '114.107877']
 				const dropoffs = [
-					["22.284419", "114.159510"],
-					["22.326442", "114.167811"]
+					['22.284419', '114.159510'],
+					['22.326442', '114.167811']
 				]
 
 				return routeService.createRequest(start, dropoffs)
@@ -71,16 +73,16 @@ describe('services', () => {
 
 		describe('updateRoute', () => {
 			it('should update success route', () => {
-				const start = ["22.372081", "114.107877"]
+				const start = ['22.372081', '114.107877']
 				const dropoffs = [
-					["22.284419", "114.159510"],
-					["22.326442", "114.167811"]
+					['22.284419', '114.159510'],
+					['22.326442', '114.167811']
 				]
 				const status = 'success'
 				const path = [
-					["22.372081", "114.107877"],
-					["22.326442", "114.167811"],
-					["22.284419", "114.159510"]
+					['22.372081', '114.107877'],
+					['22.326442', '114.167811'],
+					['22.284419', '114.159510']
 				]
 				const totalDistance = 20000
 				const totalTime = 1800
@@ -99,10 +101,10 @@ describe('services', () => {
 			})
 
 			it('should update failure error', () => {
-				const start = ["22.372081", "114.107877"]
+				const start = ['22.372081', '114.107877']
 				const dropoffs = [
-					["22.284419", "114.159510"],
-					["22.326442", "114.167811"]
+					['22.284419', '114.159510'],
+					['22.326442', '114.167811']
 				]
 				const status = 'failure'
 				const error = {

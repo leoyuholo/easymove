@@ -12,8 +12,7 @@ const latlngSchema = Joi.array().length(2).ordered(
 const routeRequestSchema = Joi.array().min(2).items(latlngSchema)
 router.post('/', (req, res) => {
 	const result = Joi.validate(req.body, routeRequestSchema)
-	if (result.error)
-		return res.status(400).send(result.error.message)
+	if (result.error) { return res.status(400).send(result.error.message) }
 	const [start, ...dropoffs] = req.body
 
 	routeService.createRequest(start, dropoffs)
@@ -30,14 +29,12 @@ const tokenSchema = Joi.object().keys({
 })
 router.get('/:token', (req, res) => {
 	const result = Joi.validate(req.params, tokenSchema)
-	if (result.error)
-		return res.status(400).send(result.error.message)
+	if (result.error) { return res.status(400).send(result.error.message) }
 	const token = req.params.token
 
 	routeService.findRoute(token)
 		.then(route => {
-			if (!route)
-				return res.status(404).send()
+			if (!route) { return res.status(404).send() }
 
 			if (route.status === 'success') {
 				return res.json({

@@ -10,7 +10,7 @@ const sendRequest = (route) => {
 		start: route.start,
 		dropoffs: route.dropoffs
 	})
-	.then(() => route)
+		.then(() => route)
 }
 
 service.createRequest = (start, dropoffs) => {

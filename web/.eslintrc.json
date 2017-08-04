@@ -1,0 +1,10 @@
+{
+  "extends": "standard",
+  "env": {
+    "mocha": true
+  },
+  "rules": {
+    "indent": ["warn", "tab"],
+    "no-tabs": 0
+  }
+}
