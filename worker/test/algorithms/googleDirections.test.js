@@ -1,30 +1,31 @@
+const path = require('path')
 const chai = require('chai')
 const chaiAsPromised = require('chai-as-promised')
 const nock = require('nock')
 
 const googleDirectionsAlgorithm = require('../../algorithms/googleDirections')
 
-chai.use(chaiAsPromised);
-const should = chai.should();
+chai.use(chaiAsPromised)
+chai.should()
 
 describe('algorithms', () => {
 	describe('computeRoute', () => {
 		const nockBack = nock.back
 		nockBack.setMode('record')
-		nockBack.fixtures = __dirname + '/nockFixtures'
-		nockBackPromisified = (filename) => {
+		nockBack.fixtures = path.join(__dirname, '/nockFixtures')
+		const nockBackPromisified = (filename) => {
 			return new Promise((resolve, reject) => {
 				nockBack(filename, nockDone => resolve(nockDone))
-			});
+			})
 		}
 
 		it('should find path, distance and time', () => {
 			return nockBackPromisified('directions.json')
 				.then(nockDone => {
-					const start = ["22.372081", "114.107877"]
+					const start = ['22.372081', '114.107877']
 					const dropoffs = [
-						["22.284419", "114.159510"],
-						["22.326442", "114.167811"]
+						['22.284419', '114.159510'],
+						['22.326442', '114.167811']
 					]
 					const path = [
 						[22.3720481, 114.107857],
@@ -47,9 +48,9 @@ describe('algorithms', () => {
 		it('should find path with only one dropoff', () => {
 			return nockBackPromisified('one_dropoff.json')
 				.then(nockDone => {
-					const start = ["22.372081", "114.107877"]
+					const start = ['22.372081', '114.107877']
 					const dropoffs = [
-						["22.284419", "114.159510"]
+						['22.284419', '114.159510']
 					]
 					const path = [
 						[22.3720481, 114.107857],
@@ -71,23 +72,23 @@ describe('algorithms', () => {
 		it('should find path with many dropoffs', () => {
 			return nockBackPromisified('many_dropoffs.json')
 				.then(nockDone => {
-					const start = ["22.372081", "114.107877"] // tsuen wan
+					const start = ['22.372081', '114.107877'] // tsuen wan
 					const dropoffs = [
-						["22.284419", "114.159510"], // hong kong station
-						["22.326442", "114.167811"], // prince edward
-						["22.3353481", "114.1761146"], // innocenter
-						["22.4311816", "114.215094"], // science park
-						["22.2619385", "114.1295144"], // cyberport
-						["22.2466607", "114.1757239"], // ocean park
-						["22.3129666", "114.0412819"], // disney
-						["22.308047", "113.9184808"], // airport
-						["22.2758835", "114.145532"], // victoria peak
-						["22.3371045", "114.1747205"], // festival walk
-						["22.337127", "114.17279"], // cityu
-						["22.4162632", "114.2109318"], // cuhk
-						["22.2829989", "114.1370848"], // hku
-						["22.3363998", "114.2654655"], // hkust
-						["22.28588", "114.158131"] // ifc
+						['22.284419', '114.159510'], // hong kong station
+						['22.326442', '114.167811'], // prince edward
+						['22.3353481', '114.1761146'], // innocenter
+						['22.4311816', '114.215094'], // science park
+						['22.2619385', '114.1295144'], // cyberport
+						['22.2466607', '114.1757239'], // ocean park
+						['22.3129666', '114.0412819'], // disney
+						['22.308047', '113.9184808'], // airport
+						['22.2758835', '114.145532'], // victoria peak
+						['22.3371045', '114.1747205'], // festival walk
+						['22.337127', '114.17279'], // cityu
+						['22.4162632', '114.2109318'], // cuhk
+						['22.2829989', '114.1370848'], // hku
+						['22.3363998', '114.2654655'], // hkust
+						['22.28588', '114.158131'] // ifc
 					]
 					const path = [
 						[22.3720481, 114.107857],
@@ -123,36 +124,36 @@ describe('algorithms', () => {
 		it('should fail with too many dropoffs', () => {
 			return nockBackPromisified('too_many_dropoffs.json')
 				.then(nockDone => {
-					const start = ["22.372081", "114.107877"] // tsuen wan
+					const start = ['22.372081', '114.107877'] // tsuen wan
 					const dropoffs = [
-						["22.284419", "114.159510"], // hong kong station
-						["22.326442", "114.167811"], // prince edward
-						["22.3353481", "114.1761146"], // innocenter
-						["22.4311816", "114.215094"], // science park
-						["22.2619385", "114.1295144"], // cyberport
-						["22.2466607", "114.1757239"], // ocean park
-						["22.3129666", "114.0412819"], // disney
-						["22.308047", "113.9184808"], // airport
-						["22.2758835", "114.145532"], // victoria peak
-						["22.3371045", "114.1747205"], // festival walk
-						["22.337127", "114.17279"], // cityu
-						["22.4162632", "114.2109318"], // cuhk
-						["22.2829989", "114.1370848"], // hku
-						["22.3363998", "114.2654655"], // hkust
-						["22.28588", "114.158131"], // ifc
-						["22.3353481", "114.1761146"], // innocenter
-						["22.4311816", "114.215094"], // science park
-						["22.2619385", "114.1295144"], // cyberport
-						["22.2466607", "114.1757239"], // ocean park
-						["22.3129666", "114.0412819"], // disney
-						["22.308047", "113.9184808"], // airport
-						["22.2758835", "114.145532"], // victoria peak
-						["22.3371045", "114.1747205"], // festival walk
-						["22.337127", "114.17279"], // cityu
-						["22.4162632", "114.2109318"], // cuhk
-						["22.2829989", "114.1370848"], // hku
-						["22.3363998", "114.2654655"], // hkust
-						["22.28588", "114.158131"] // ifc
+						['22.284419', '114.159510'], // hong kong station
+						['22.326442', '114.167811'], // prince edward
+						['22.3353481', '114.1761146'], // innocenter
+						['22.4311816', '114.215094'], // science park
+						['22.2619385', '114.1295144'], // cyberport
+						['22.2466607', '114.1757239'], // ocean park
+						['22.3129666', '114.0412819'], // disney
+						['22.308047', '113.9184808'], // airport
+						['22.2758835', '114.145532'], // victoria peak
+						['22.3371045', '114.1747205'], // festival walk
+						['22.337127', '114.17279'], // cityu
+						['22.4162632', '114.2109318'], // cuhk
+						['22.2829989', '114.1370848'], // hku
+						['22.3363998', '114.2654655'], // hkust
+						['22.28588', '114.158131'], // ifc
+						['22.3353481', '114.1761146'], // innocenter
+						['22.4311816', '114.215094'], // science park
+						['22.2619385', '114.1295144'], // cyberport
+						['22.2466607', '114.1757239'], // ocean park
+						['22.3129666', '114.0412819'], // disney
+						['22.308047', '113.9184808'], // airport
+						['22.2758835', '114.145532'], // victoria peak
+						['22.3371045', '114.1747205'], // festival walk
+						['22.337127', '114.17279'], // cityu
+						['22.4162632', '114.2109318'], // cuhk
+						['22.2829989', '114.1370848'], // hku
+						['22.3363998', '114.2654655'], // hkust
+						['22.28588', '114.158131'] // ifc
 					]
 					const errorMessage = 'Too many waypoints in the request (29). The maximum allowed waypoints for this request is 23, plus the origin, and destination.'
 
