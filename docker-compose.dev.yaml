@@ -18,11 +18,11 @@ services:
       - .:/app
     environment:
       - WEB_PORT=3000
-    command: npm run test-watch
+    command: npm run coverage
   worker:
     volumes:
       - .:/app
-    command: npm run test-watch
+    command: npm run coverage
   lib:
     image: node:6
     volumes:

@@ -5,7 +5,7 @@
     "dev": "nodemon --exec npm run test --watch .",
     "lint": "eslint .",
     "test": "mocha -t 10000 index.test.js",
-    "coverage": "nyc --reporter=lcov mocha -t 10000 index.test.js"
+    "coverage": "nyc --reporter=lcov npm test"
   },
   "main": "index.js",
   "dependencies": {
