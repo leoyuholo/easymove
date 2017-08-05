@@ -11,10 +11,11 @@ env:
   - RABBITMQ_URI=amqp://localhost MONGODB_URI=mongodb://localhost
 
 install:
-  - npm install --prefix lib/amqp
-  - npm install --prefix web
-  - npm install --prefix worker
-  - npm install --prefix e2e
+  - npm install -g yarn
+  - cd lib/amqp && yarn install
+  - cd web && yarn install
+  - cd worker && yarn install
+  - cd e2e && yarn install
 
 script:
   - npm run --prefix lib/amqp lint
