@@ -3,12 +3,13 @@ const chaiAsPromised = require('chai-as-promised')
 const request = require('supertest')
 const bluebird = require('bluebird')
 const promiseRetry = require('promise-retry')
+const config = require('config')
 
 chai.use(chaiAsPromised)
 const should = chai.should()
 
 describe('e2e', () => {
-	const host = 'http://web'
+	const host = config.get('web.uri')
 
 	before(() => {
 		return promiseRetry(retry => {
