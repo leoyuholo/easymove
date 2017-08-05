@@ -3,14 +3,14 @@ language: node_js
 node_js:
   - '6'
 
-sudo: required
+sudo: false
 
 services:
   - mongodb
   - rabbitmq
 
 env:
-  - RABBITMQ_URI=amqp://localhost MONGODB_URI=mongodb://localhost WEB_URI=http://localhost:3000 WEB_PORT=3000
+  - RABBITMQ_URI=amqp://localhost MONGODB_URI=mongodb://localhost
 
 install:
   - npm install -g yarn
@@ -24,12 +24,9 @@ script:
   - npm run --prefix web lint
   - npm run --prefix worker lint
   - npm run --prefix e2e lint
+  - npm run --prefix lib/amqp test
   - npm run --prefix web test
   - npm run --prefix worker test
-  - npm run --prefix lib/amqp test
-  - npm start --prefix web &
-  - npm start --prefix worker &
-  - npm run --prefix e2e test
 
 notifications:
   email: false

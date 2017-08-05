@@ -2,9 +2,9 @@
 [![Build Status](https://travis-ci.org/leoyuholo/easymove.svg?branch=master)](https://travis-ci.org/leoyuholo/easymove)
 
 ## Deployment
-** Prerequisite**: Need to have [docker](https://store.docker.com/editions/community/docker-ce-server-ubuntu/plans/docker-ce-server-ubuntu-tier?tab=instructions) and [docker-compose](https://docs.docker.com/compose/install/) ](https://docs.docker.com/compose/) installed on system.
+**Prerequisite**: Need to have [docker](https://store.docker.com/editions/community/docker-ce-server-ubuntu/plans/docker-ce-server-ubuntu-tier?tab=instructions) and [docker-compose](https://docs.docker.com/compose/install/) ](https://docs.docker.com/compose/) installed on system.
 
-** Prerequisite**: Need [Google Maps](https://developers.google.com/maps/) API key to compute shortest route.
+**Prerequisite**: Need [Google Maps](https://developers.google.com/maps/) API key to compute shortest route.
 
 First, edit `docker-compose.yaml` to modify the environment variable `GOOGLE_MAPS_API_KEY`, change it to a valid Google Maps API key.
 

@@ -18,11 +18,11 @@ services:
       - .:/app
     environment:
       - WEB_PORT=3000
-    command: npm run coverage
+    command: npm run test-watch
   worker:
     volumes:
       - .:/app
-    command: npm run coverage
+    command: npm run test-watch
   lib:
     image: node:6
     volumes:
@@ -30,4 +30,4 @@ services:
     working_dir: /app/lib/amqp
     depends_on:
       - rabbitmq
-    command: npm run coverage
+    command: npm run dev
